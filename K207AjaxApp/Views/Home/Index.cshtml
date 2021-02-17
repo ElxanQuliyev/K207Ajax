@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Marka>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <label>Marka</label>
+        <select id="myMarka" class="form-control">
+            @foreach (var item in Model)
+            {
+                <option value="@item.ID">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-lg-6">
+        <label>Model</label>
+        <select id="myModel" class="form-control">
+            <option value="value">text</option>
+        </select>
+    </div>
+
+</div>
+@section Scripts{ 
+    <script>
+        $("#myMarka").css("color", "red")
+    </script>
+} 
